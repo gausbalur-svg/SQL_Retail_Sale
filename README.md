@@ -176,7 +176,7 @@ from retail_sale
 group by 1,2
 ) as T1;
 ```
-** write a SQL query to find the top 5 customer based on the highest total sales**
+8.**write a SQL query to find the top 5 customer based on the highest total sales**
 ```
 select customer_id , 
    sum(total_sale)as  total_
@@ -184,7 +184,7 @@ select customer_id ,
 	group by customer_id , total_sale
 	order by 2 desc limit 5;
 ```
-**find the number of unqiue customers who purchased item from each category**
+9.**find the number of unqiue customers who purchased item from each category**
 ```
 select category,
 	count(distinct customer_id) as unqiue_customers
@@ -192,7 +192,7 @@ select category,
   group by category 
   order by 2;
 ```
-**write a SQL query to create each shift and number of order {Example morning  <=12, Afternoon between  12 & 17  Evening >`17`}**
+10.**write a SQL query to create each shift and number of order {Example morning  <=12, Afternoon between  12 & 17  Evening >`17`}**
 ```
 with hourly_sale
  AS(
